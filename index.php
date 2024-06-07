@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="website icon" type="png" href="assets/siteicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<?php 
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$message = "";
+if (!empty($_POST)) {
+    $email = $_POST["email"];
+    $rsp = $_POST["rsp"];
+    $toEmail = "makwanaraj0013@gmail.com"; // Corrected the variable assignment
+    $mailHeaders = "From: " . $email . "\r\n" . 
+                   "Reply-To: " . $email . "\r\n" . 
+                   "X-Mailer: PHP/" . phpversion();
+    $subject = "Feedback from To Do App";
+    $body = "Email: " . $email . "\nMessage: " . $rsp;
+    if (mail($toEmail, $subject, $body, $mailHeaders)) {
+        $message = "Your information was sent successfully.";
+    } else {
+        $message = "There was an error sending your information. Please try again.";
+    }
+}
+?>
+    <div class="header">
+        <div class="hangingimages">
+            <div class="text1">Add</div>
+            <div class="text2">Complete</div>
+            <dic class="text3">Remind</dic>
+            <div class="column1">
+            </div>
+            <div class="column2"></div>
+            <div class="column3"></div>
+        </div>
+        <div class="title">
+        <h1>To Do App</h1>
+        </div>
+        <div class="timesection">
+        <h2 class="datetodisplay"></h2>
+        <h3 class="daytodisplay"></h3>
+        <h4 class="timedisplay"></h4>
+        </div>
+    </div>
+    <div class="container">
+        <div class="todoapp">
+            <img src="assets/siteicon.png" alt="">
+        </div>
+        <p id="rotatingtext" class="rotatingtext"></p>
+        <div class="todolist">
+            <div class="input">
+                <input type="text" name="task" placeholder="Enter your Task" id="task" title="Enter your tast text">
+                <i class="fa-solid fa-plus" id="plus" title="Click to add me & You can also press Enter Key" ></i>
+            </div>
+            <div class="tasklist"></div>
+        </div>
+        <div class="eraseall">
+            <i class="fa-solid fa-eraser" id="removeall" title="Click me to delete all added task"></i>
+        </div>
+        <div class="suggestions">
+            <img src="assets/list.png" width="170px" alt="" class="tasklistsug" title="keep it uptodate">
+            <img src="assets/medic.png"  width="120px" class="checkup" title="Medical task">
+            <img src="assets/grocery-cart.png" alt="" class="grocery" width="120px" title="Grocery Shopping">
+            <img src="assets/programming.png" alt="" class="coding" width="150px" title="Coding">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="goodqt">
+            <span class="txtcontent">
+            <span class="span1">Every task to be completed Regulary.<br/></span>
+            <span class="span2">✅Check-Do-Act✅</span>
+            </span>
+        </div>
+        <div class="tandc">
+            <span class="tandctext">Terms And Conditions Applied <sup>&copy</sup></span>
+        </div>
+        <div class="suggestionform">
+            <form class="feedbackform" method="post">
+                <label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Valid Email" id="email" name="email"></label>
+                <button class="btn" name = "send">Submit</button>
+                <br>
+                <br>
+                <label for="Feedback">Feedback&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Your Response" id="fdkbk" name="rsp"></label>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
