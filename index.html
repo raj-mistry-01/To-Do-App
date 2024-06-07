@@ -10,28 +10,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<?php 
-// Enable error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$message = "";
-if (!empty($_POST)) {
-    $email = $_POST["email"];
-    $rsp = $_POST["rsp"];
-    $toEmail = "makwanaraj0013@gmail.com"; // Corrected the variable assignment
-    $mailHeaders = "From: " . $email . "\r\n" . 
-                   "Reply-To: " . $email . "\r\n" . 
-                   "X-Mailer: PHP/" . phpversion();
-    $subject = "Feedback from To Do App";
-    $body = "Email: " . $email . "\nMessage: " . $rsp;
-    if (mail($toEmail, $subject, $body, $mailHeaders)) {
-        $message = "Your information was sent successfully.";
-    } else {
-        $message = "There was an error sending your information. Please try again.";
-    }
-}
-?>
     <div class="header">
         <div class="hangingimages">
             <div class="text1">Add</div>
