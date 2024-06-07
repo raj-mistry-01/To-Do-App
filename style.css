@@ -1,0 +1,550 @@
+@keyframes borderColorChange {
+    0% { border-color: #4a90e2; }
+    20% { border-color: #f39c12; }
+    40% { border-color: #27ae60; }
+    60% { border-color: #e74c3c; }
+    80% { border-color: #9b59b6; }
+    100% { border-color: #4a90e2; }
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+.header{
+    width: 100%;
+    height: 135px;
+    border: 1px solid ;
+    background-color: rgb(83, 193, 226);
+}
+:root{
+    --medium-spring-green: hsl(156, 100%, 50%);
+    --red-orange-creyola: hsl(0, 100%, 68%);
+    --caribbean-green: hsl(160, 98%, 39%);
+    --oxford-blue_50: hsla(213, 86%, 16%, 0.5);
+    --oxford-blue_70: hsla(213, 86%, 16%, 0.7);
+    --prussian-blue: hsl(210, 100%, 20%);
+    --oxford-blue: hsl(213, 86%, 16%);
+    --orange-peel: hsl(37, 100%, 50%);
+    --cultured_20: hsla(206, 23%, 94%, 0.2);
+    --winter-sky: hsl(341, 100%, 60%);
+    --light-gray: hsl(0, 0%, 80%);
+    --malachite: hsl(120, 70%, 59%);
+    --indigo-dye: hsl(213, 81%, 25%);
+    --dim-gray: hsl(0, 0%, 41%);
+    --black_20: hsla(0, 0%, 0%, 0.2);
+    --silver: hsl(0, 0%, 76%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --ff-roboto: "Roboto", sans-serif;
+}
+body{
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    position: fixed;
+}
+.header .hangingimages{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    margin-left: 70px;
+    position: fixed;
+}
+.header .hangingimages .column1 {
+    width: 10px;
+    height: 150px;
+    margin-left: 40px;
+    border: 1px;
+    border-radius: 10px;
+    background-color: var(--caribbean-green);
+    position: fixed;
+}
+.header .hangingimages  .text1{
+    width:90px;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 36px;
+    margin-top: 140px;
+    border: 1px;
+    border-radius: 10px;
+    font-family: var(--ff-roboto);
+    color: var(--indigo-dye);
+    background-color: var(--orange-peel);
+    position: fixed;
+}
+.header .hangingimages .column2 {
+    width: 10px;
+    height: 87px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: wheat;
+    margin-left: 130px;
+    position: fixed;
+}
+.header .hangingimages  .text2{
+    width: 120px;
+    text-align: center;
+    height: 37px;
+    font-size: 23px;
+    border: 2px solid ;
+    margin-left: 79px;
+    margin-top: 80px;
+    padding-top: 5px;
+    border: 2px;
+    border-radius: 10px;
+    color: var(--oxford-blue);
+    background-color: var(--red-orange-creyola);
+    font-family: var(--ff-roboto);
+    position: fixed;
+}
+.header .hangingimages .column3 {
+    width: 10px;
+    height: 130px;
+    margin-left: 262px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: var(--dim-gray);
+}
+.header .hangingimages  .text3 {
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    margin-left: 210px;
+    margin-top: 125px;
+    font-size: 20px;
+    font-family: var(--ff-roboto);
+    border-radius: 12px;
+    background-color: var(--winter-sky);
+    padding-top: 12px;
+    position: fixed;
+}
+.header .title h1{
+    width: 310px;
+    margin-left: 40%;
+    font-size: 56px;
+    height: 60px;
+    font-family: "Poppins",sans-serif;
+    color: white;
+    margin-top: 29px;
+    position: fixed;
+}
+.header .timesection{
+    width: 200px;
+    height: 120px;
+    float: right;
+    margin-bottom: 10px;
+}
+.header .datetodisplay{
+    margin-top: 0px;
+    font-family: var(--ff-roboto);
+    height: 30px;
+    position: fixed;
+}
+.header .daytodisplay{
+    position: relative;
+    top: 30px;
+    font-family: var(--ff-roboto);
+    position: fixed;
+}
+.header .timedisplay{
+    position: relative;
+    top: 57px;
+    font-family: var(--ff-roboto);
+}
+.container {
+    width: 100%;
+    height : 450px;
+    background: var(--prussian-blue);
+    display: flex;
+}
+.container .todolist{
+    margin-top: 30px;
+    width: 530px;
+    border: 3px solid wheat;
+    border-radius: 1pc;
+    height: 368px;
+    margin-left: 32%;
+    position: fixed;
+}
+@keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.container .eraseall {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 12px;
+    margin-left: 970px;
+    margin-top: 400px;
+    position: fixed;
+}
+.container .eraseall i{
+    margin: 10px;
+    text-align: center;
+    font-size: 33px;
+    color: var(--dim-gray);
+}
+.container p{
+    height: 190px;
+    width: 190px;
+    animation: effect 8s linear infinite;
+    justify-content: center;
+    margin-left: 210px;
+    margin-top: 220px;
+    display: flex;
+    position: fixed;
+}
+.container  span{
+    position: absolute;
+    transform-origin: 0 90px;
+    left: 50%;
+    font-family:'Courier New', Courier, monospace ;
+    font-weight: 660;
+    text-transform: capitalize;
+    color:  var(--red-orange-creyola);
+    font-size: 20px;
+}
+.container .todoapp {
+    width: 260px;
+    height: 260px;
+    float: left;
+    margin-top: 120px;
+    margin-left: 70px;
+    display: flex;
+    position: fixed;
+}
+.container .todoapp img{
+    width: 250px;
+    height: 250px;
+    display: flex;
+}
+.container .todoapp img:hover{
+    width: 255px;
+    height: 255px;
+    display: flex;
+}
+.container .todolist .input {
+    height: 59px;
+}
+.container .todolist input{
+    background-color: transparent;
+    height: 38px;
+    width: 98%;
+    border-radius: 12px;
+    border: 4px solid;
+    animation: borderColorChange 5s infinite;
+    transition: border-color 0.3s;
+    font-family: var(--ff-roboto);
+    font-size: 20px;
+    font-weight: 900;
+}
+.container .todolist .input #plus{
+    position: relative;
+    top: -35px;
+    left: 475px;
+    color: var(--caribbean-green);
+    font-size: 27px;
+}
+.container .todolist .tasklist {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.container .suggestions {
+    width: 100%;
+    height: 450px;
+    margin-left: 1030px;
+    position: fixed;
+}
+@keyframes move {
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(-10px,14px);
+    }
+    100% {
+        transform: translate(5px,20px);
+    }
+}
+@keyframes move1{
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(14px,-10px);
+    }
+    100% {
+        transform: translate(20px,5px);
+    }
+}
+.container .suggestions .tasklistsug {
+    margin-left: 20px;
+    margin-top: 30px;
+    position:  fixed;
+    animation: move 3s linear infinite alternate;  
+}
+.container .suggestions .checkup{
+    margin-top: 0px;
+    margin-left: 300px;
+    margin-top: 90px;
+    position: fixed;
+    animation: move1 3s linear infinite alternate;  
+}
+.container .suggestions .grocery {
+    margin-top: 300px;
+    margin-left: 50px;
+    position: fixed;
+    animation: move1 3s linear infinite alternate;  
+}
+.container .suggestions .coding {
+    margin: 270px;
+    animation: move 3s linear infinite alternate;  
+}
+::-webkit-scrollbar {
+    width: 20px; 
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 2px solid var(--red-orange-creyola); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--cultured_20);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--caribbean-green);
+}
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+.taskdiv{
+    width: 505px;
+    height: 60px;
+    margin-left: 4px;
+    border-radius: 0.8pc;
+    background-color: var(--cultured_20);
+    display: flex;
+}
+.container .todolist .taskdiv .checkbox{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    border: #1b1717;
+    margin-left: 12px;
+}
+.taskdiv .iconsectiontask{
+    width: 80px;
+    margin-top: 15px;
+    margin-right: 8px;
+    font-size: 27px;
+    display: flex;
+}
+#edit {
+    color: rgb(235, 187, 97);
+}
+#delete {
+    color: rgb(135, 8, 8);
+}
+.taskdiv .iconsectiontask i{
+    margin: 0px 10px;
+}
+.todolist .tasklist .tasktext {
+    width: 360px;
+    height: 30px;
+    font-size: 28px;
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 0px;
+    font-family: var(--ff-roboto);
+}
+.footer {
+    margin-top: 0%;
+    width: 100%;
+    height: 215px;
+    background-color: rgb(224, 81, 141);
+}
+.footer .goodqt {
+    width: 600px;
+    margin-top: 17px;
+    margin-left: 30px;
+    height: 100px;
+    border: 8px solid ;
+    outline: 2px solid wheat;
+    border-color: var(--red-orange-creyola);
+    border-radius: 8px;
+    position: fixed;
+}
+.footer .goodqt .txtcontent {
+    border: 2px solid wheat;
+    border-radius: 4px;
+    width: 596px;
+    height: 99px;
+    position: fixed;
+}
+.footer .goodqt .span1{
+    margin-top: 16px;
+    margin-left: 60px;
+    font-size: 29px;
+    color: wheat;
+    font-family: var(--ff-roboto);
+    position: fixed;
+}
+.footer .goodqt .span2{
+    margin-top: 51px;
+    margin-left: 140px;
+    font-size: 29px;
+    color: wheat;
+    font-family: var(--ff-roboto);
+    position: fixed;
+}
+.footer .tandc .tandctext {
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    font-family: var(--ff-roboto);
+    margin-top: 110px;
+    margin-left: 43%;
+    position: fixed;
+}
+.footer .suggestionform {
+    width: 600px;
+    margin-top: 10px;
+    height: 120px;
+    border-left: 4px solid;
+    border-color: var(--prussian-blue);
+    float: right;
+}
+.footer .suggestionform .feedbackform {
+    font-family: var(--ff-roboto);
+    font-size: 20px;
+    margin-left: 43px;
+    margin-top: 10px;
+    width: 510px;
+    height: 100px;
+    color: var(--orange-peel);
+    position: fixed;
+}
+.footer .suggestionform input {
+    margin-top: 5px;
+    width: 270px;
+    height: 30px;
+    border: wheat;
+    border-radius: 12px;
+    background: wheat;
+    font-family: var(--ff-roboto);
+}
+.footer .suggestionform .feedbackform .btn {
+    width: 120px;
+    height: 30px;
+    margin-right: 90px;
+    align-items: center;
+    margin-top: 36px;
+    font-family: var(--ff-roboto);
+    font-size: 20px;
+    color: var(--oxford-blue_70);
+    background-color: var(--light-gray);
+    border : 1px;
+    border-radius: 12px;
+    position: fixed;
+    float: right;
+}
+
+@media screen and (max-width: 1200px) {
+    .header .hangingimages .text1 {
+        font-size: 20px;
+    }
+    .header .hangingimages .text2 {
+        font-size: 18px;
+    }
+    .header .hangingimages .text3 {
+        font-size: 16px;
+    }
+    .header .title h1 {
+        font-size: 42px;
+    }
+    .container .todolist {
+        margin-left: 25%;
+    }
+    .container .eraseall {
+        margin-left: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header .hangingimages .text1 {
+        font-size: 18px;
+    }
+    .header .hangingimages .text2 {
+        font-size: 16px;
+    }
+    .header .hangingimages .text3 {
+        font-size: 14px;
+    }
+    .header .title h1 {
+        font-size: 36px;
+    }
+    .container .todolist {
+        margin-left: 20%;
+    }
+    .container .eraseall {
+        margin-left: 85%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header .hangingimages .text1 {
+        font-size: 16px;
+    }
+    .header .hangingimages .text2 {
+        font-size: 14px;
+    }
+    .header .hangingimages .text3 {
+        font-size: 12px;
+    }
+    .header .title h1 {
+        font-size: 30px;
+    }
+    .container .todolist {
+        margin-left: 15%;
+    }
+    .container .eraseall {
+        margin-left: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header .hangingimages {
+        display: none;
+    }
+    .header .title h1 {
+        margin-left: 20%;
+    }
+    .container .todolist {
+        margin-left: 5%;
+    }
+    .container .eraseall {
+        margin-left: 60%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header .title h1 {
+        margin-left: 15%;
+    }
+    .container .todolist {
+        margin-left: 2%;
+    }
+    .container .eraseall {
+        margin-left: 50%;
+    }
+}
